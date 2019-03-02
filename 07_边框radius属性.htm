@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        
+        .one {
+            width: 200px;
+            height: 200px;
+            border:2px solid blue;
+            border-radius:5%;
+            border-bottom-right-radius: 30px 20px;
+        }
+        .two {
+            width: 200px;
+            height: 200px;
+            border:2px solid blue;
+            /*
+            设置或检索对象使用圆角边框。提供2个参数，2个参数以“/”分隔，每个参数允许设置1~4个参数值，
+            第1个参数表示水平半径，第2个参数表示垂直半径，如第2个参数省略，则默认等于第1个参数 
+            如果只提供一个，将用于全部的于四个角。 
+            如果提供两个，第一个用于上左(top-left)、下右(bottom-right)，第二个用于上右(top-right)、下左(bottom-left)。 
+            如果提供三个，第一个用于上左(top-left)，第二个用于上右(top-right)、下左(bottom-left)，第三个用于下右(bottom-right)。 
+            */
+            border-radius: 30px 60px 90px 120px/60px 90px 120px;
+        }
+    </style>
+<body>
+    <div class="one">AAAAAAAAA</div>
+    <div class="two">AAAAAAAAA</div>
+</body>
+</html>

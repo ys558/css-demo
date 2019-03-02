@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        /*1. 属性选择器为css2已有内容，表示通过a标签的href属性找到, a可以省略，但不能找class！！*/
+        a[href] {
+            font-size: 2cm;
+            color: black;
+        }
+        a[href=a2] {
+            font-size: 1.5cm;
+            color:darkgoldenrod
+        }
+
+        div[align = center] {
+            font-size: 1.2cm;
+            color: darkslategrey
+        }
+
+        /*~=可选择class中的有 空格 隔开的某一属性*/
+        [class~=bb] {
+            font-size: 1.2cm;
+            color: crimson;
+        }
+        /*|=可选class中有 - 隔开的某一属性*/
+        [class|=dd] {
+            font-size: 1.0cm;
+            color: hotpink;
+        }
+
+        /*css3的正则扩展*/
+        a[href*=image] {
+            font-size: 0.9cm;
+            color: khaki;
+        }
+        a[href ^=http] {
+            font-size: 0.8cm;
+            color:rgb(33, 133, 158);
+        }
+        a[href $=jpg] {
+            color:chocolate
+        }
+    </style>
+<body>
+    <p title="p1">p1</p><br>
+    <div title="div1">div1</div>
+    <b class="b1">b1</b><br>
+    <a href="a1">a1</a><br>
+    <a href="a2">a2</a><br>
+
+    <div align = 'left'>div2</div>
+    <div align = 'center'>div3</div>
+    <div align = 'right'>div4</div>
+
+    <div class="aa bb cc">空格隔开的属性选择器div</div>
+    <div class="dd-ee">-隔开的属性选择器div</div>
+
+    <a href="http://www.ababab.tx">a1</a><br>
+    <a href="www.ababab.tx/image/demo2.png">a1</a><br>
+    <a href="http://www.ababab.tx">a1</a><br>
+    <a href="http://www.ababab.tx/pic/demo2.jpg">a1</a><br>
+</body>
+</html>

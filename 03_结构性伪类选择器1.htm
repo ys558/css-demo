@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        /*css2的伪类选择器，只有a标签有*/
+        a:link {}
+        a:visited {}
+        a:hover {}
+        a:active {}
+
+        /*2. css2的伪元素选择器*/
+        p::first-line {
+            font-size: 30px;
+            color: red;
+        }
+        p::first-letter {
+            font-size: 60px;
+            color: blue;
+        }
+        p::before {
+            content: "你好"
+        }
+        P::after {
+            content: "Hi"
+        }
+
+        /*css3结构性伪类选择器*/
+        /*3. 根结构，即整个html页面：*/
+        :root {
+            background: antiquewhite
+        }
+        /*除去类名为.three的li标签，其余所有为lightblue颜色*/
+        ul>li:not(.three) {
+            color:rgb(107, 143, 155)
+        }
+        /*li下为空的隐藏*/        
+        li:empty {
+            display: none;
+        }
+        /*对页面中某个target制定元素生效,该样式只在用户点击了链接，
+        并跳转到target元素后生效*/
+        :target {
+            font-size: 0.8cm;
+        }
+
+        /*4. */
+        li:first-child {
+            
+        }
+    </style>
+<body>
+    <!-- 2. -->
+    <p>
+        aaaaaaaaaaaaaaaaaaaa <br>
+        bbbbbbbbbbbbbbbbbbbb <br>
+        cccccccccccccccccccc <br>
+        dddddddddddddddddddd <br>
+    </p>
+
+    <!-- 3. -->
+    <ul>
+        <li>eeeeeeeeeeeeeeee</li>
+        <li class="two">eeeeeeeeeeeeeeee</li>
+        <li class="three">eeeeeeeeeeeeeeee</li>
+        <li class="four">eeeeeeeeeeeeeeee</li>
+        <li></li>
+    </ul>
+
+    <a href="#one">one</a><br>
+    <a href="#two">two</a><br>
+    <br>
+    <br>
+    <br>
+    <a name="one">
+        #########################################<br>
+        #########################################<br>
+        #########################################<br>
+        #########################################<br>
+    </a>
+    <a name="two">
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>
+    </a>
+
+    <!-- 4. -->
+    <ul>
+        <li>1. hhhhhhhhhhhhhh</li>
+        <li>2. hhhhhhhhhhhhhh</li>
+        <li>3. hhhhhhhhhhhhhh</li>
+        <li>4. hhhhhhhhhhhhhh</li>
+    </ul>
+</body>
+</html>

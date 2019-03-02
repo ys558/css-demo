@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+    <style>
+        /*5. 同级p标签的第4个*/
+        p:nth-of-type(4) {
+            background: lightpink
+        }
+        p:nth-last-of-type(2) {
+            background: lightcyan;
+        }
+        /* 匹配第0，3，6，9...个，n从0递增 */
+        p:nth-child(3n) {
+            font-size: 1cm;
+            background: mediumblue
+        }
+        /* 匹配第3，5，7，9...个*/        
+        p:nth-child(2n+3) {
+            font-size: 0.5cm
+        }
+
+        /*表示被包含的元素里只有一个p标签*/
+        p:only-child {
+            background: lawngreen
+        }
+        P:only-of-type {
+            background: lightseagreen
+        }
+
+        /*6. */
+        [type=text]:enabled {
+            background: lightblue
+        }
+        [type=text]:disabled {
+            background: lightcoral
+        }
+
+        /*7. 选中变色*/
+        ::selection {
+            color:lightgreen
+        }
+    </style>
+<body>
+    <!-- 5. 表单相关伪类-->
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+    <div>22222222222222222222222222</div>
+    <div>33333333333333333333333333</div>
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+    <p>11111111111111111111111111</p>
+
+    <!-- 6. -->
+    <div>
+        <p>hello world</p>
+    </div>
+    
+    <div>
+        <p>hello world</p>
+        <div>hello world2</div>
+    </div>
+
+    <!-- 7.用户界面伪类 -->
+    <form action="">
+        <input type="text" name="aaa" value="bbb"><br>
+        <input type="text" name="aaa" disabled value="bbb"><br>
+        <input type="text" name="aaa" value="bbb"><br>
+        <input type="text" name="aaa" value="bbb"><br>
+        <input type="text" name="aaa" value="bbb"><br>
+        <input type="text" name="aaa" value="bbb"><br>
+    </form>
+
+</body>
+</html>
