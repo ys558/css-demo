@@ -50,3 +50,45 @@
   a[href *=image] {}
   a[href $=jpg] {}
 ```
+
+### 3. 伪类伪元素选择器
+#### 3.1 伪类:
+语法: :
+
+示例代码: 一般只用在a标签
+```css 
+	a:link {}
+	a:visited {}
+	a:hover {}
+	a:active {}
+```
+
+#### 3.2 伪元素
+语法: ::
+
+示例代码: [03_结构性伪类选择器1.html](./03_结构性伪类选择器1.html)
+```css
+  p::first-line { }
+
+  /* 在p标签前插入 "你好" 的内容*/
+  p::before { content: "你好" }
+
+  /
+```
+
+#### 4. 结构性伪类:
+
+示例代码: [03_结构性伪类选择器1.html](./03_结构性伪类选择器1.html)
+```css
+  /* 表示根节点 */
+  :root {}
+
+  /* ul子代li.不含class为three的那个li */
+  ul > li:not(.three) {}
+
+  /* li 中没有内容的隐藏 */
+  li:empty { display: none;}
+
+  /* 只用作a标签点击了的连接: */
+  :target { font-size: 1rem; }
+```
