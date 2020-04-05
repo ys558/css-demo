@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<style>
+	/*1. 后代选择器，无论嵌套多少层都行*/
+	div p  {
+		font-size: 2cm;
+		color: rebeccapurple;
+	}
+
+	/*2. 子代选择器: 即使多层嵌套也行*/
+	div>p {
+		font-size: 2cm;
+		color: saddlebrown;
+	}
+
+	/*3. 紧临选择器，紧挨着div的下面一个p标签*/
+	div+p {
+		font-size: 0.5cm;
+		color: forestgreen;
+	}
+
+	/*4. 紧邻下面所有选择器, 紧挨着strong下面的所有a标签*/
+	strong~a {
+		font-size: 1cm;
+		color: fuchsia
+	}
+</style>
+
+<body>
+	<!-- 1. -->
+	<div>
+			<h1>
+				<p>1. 后代选择器 div p</p>
+			</h1>
+	</div>
+
+	<!-- 2. -->
+	<div>
+		<p>2. 子代选择器 div>p</p>
+		<div>
+			<p>
+				嵌套多层仍可执行: 2. 子代选择器 div>p
+			</p>
+		</div>
+	</div>
+
+	<!-- 3.  -->
+	<b>p标签1</b>
+	<p>p标签2</p>
+	<div>div标签</div>
+	<p>p标签3</p>
+	<p>p标签4</p>
+
+	<!-- 4. -->
+	<a href="">a标签1</a>
+	<a href="">a标签2</a>
+	<strong>strong标签</strong>
+	<a href="">a标签3</a>
+	<a href="">a标签4</a>
+</body>
+
+</html>
