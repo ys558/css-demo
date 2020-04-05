@@ -29,7 +29,7 @@
 ### 1.4 紧邻之后的所有元素的选择器
 语法: ~
 
-[示例代码]('D:\study\code\css3-news-feature\01_css3的样式选择器.html): 
+[示例代码]('https://github.com/ys558/css3-news-feature/blob/master/01_css3%E7%9A%84%E6%A0%B7%E5%BC%8F%E9%80%89%E6%8B%A9%E5%99%A8.html'): 
 ```css
   /* 紧挨着strong的所有a标签 */
   strong~a { }
