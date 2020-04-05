@@ -29,8 +29,24 @@
 ### 1.4 紧邻之后的所有元素的选择器
 语法: ~
 
-[01_css3的样式选择器.html](./01_css3的样式选择器.html): 
+示例: [01_css3的样式选择器.html](./01_css3的样式选择器.html): 
 ```css
   /* 紧挨着strong的所有a标签 */
   strong~a { }
+```
+### 2. 属性选择器
+语法: []
+
+示例代码:[02_css3属性选择器.html](./02_css3属性选择器.html)
+```css
+	/* 属性: */
+  a[href=a2] { }
+  div[align=center] { }
+
+  /* class中有含有dd的 */
+  [class|=dd] {}
+  
+  /* 正则的扩展:*/
+  a[href *=image] {}
+  a[href $=jpg] {}
 ```
