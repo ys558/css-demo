@@ -89,6 +89,6 @@
   /* li 中没有内容的隐藏 */
   li:empty { display: none;}
 
-  /* 只用作a标签点击了的连接: */
+  /* 只用作a标签点击后的锚点: */
   :target { font-size: 1rem; }
 ```
