@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    h1 {
+      font-size: 5rem;
+      /* 1. text-shadow 参数：左右移动 上下移动 阴影散开程度 颜色 */
+      text-shadow: -10px 20px 10px rgb(148, 133, 163);
+      /* 2. 使用图片填充字体 */
+      background-image: url('./09_text_shadow.png');
+      /* 2. 需要写兼容：*/
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    h1 {
+      /* 3. 重置初始化: */
+      all:initial;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lorem, ipsum.</h1>
+</body>
+</html>
