@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Tooltips</title>
+  <style>
+    .tooltip {
+      /* 将外层包裹的div设为相对定位，可选:  */
+      position: relative;
+
+      /* 文本样式框, 可自由修改: */
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+    
+    .tooltiptext {
+      /* !! 关键点1: 将要显示的文本先变为hidden */
+      visibility: hidden;
+
+      /* 下面部分为tooltips框样式, 可自由修改: */
+      width: 120px;
+      z-index: 1;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      /* 绝对定位, 脱离文档流, 让其可自由移动，可选:  */
+      position: absolute;
+    }
+
+    .tooltip:hover .tooltiptext {
+      /* !! 关键点2: 将要显示的文本先变为hidden */
+      visibility: visible;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="tooltip">Hover over me
+      <span class="tooltiptext">Tooltip text</span>
+    </div>
+  </body>
+</html>

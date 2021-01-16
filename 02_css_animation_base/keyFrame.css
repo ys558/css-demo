@@ -1,0 +1,46 @@
+body {
+    background: #333;
+}
+
+.box {
+    background: white;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    /* 给要做动画的元素起名，规定持续时间： */
+    animation-name: myanimation;
+    animation-duration: 6s;
+    /* 动画重复次数,可以输入数字，infinite表示无限 */
+    animation-iteration-count: 1;
+    /* 第一次执行动画时延迟两秒 */
+    /* animation-delay: 2s; */
+    /* 倒着放动画 */
+    /* animation-direction: reverse; */
+    /* 倒着放后再正着放 */
+    /* animation-direction: alternate; */
+    /* 使整个动画每一个动作匀速执行：linear */
+    /* animation-timing-function: linear; */
+    /* ease-in 开始慢，结束快，
+       ease-out 开始快，结束慢
+       ease-in-out 默认设置 */
+    /* animation-timing-function: ease-in; */
+    /* 最后一个动作结束后，保持结束时的状态，不恢复初始状态 */
+    animation-fill-mode: forwards;
+}
+
+/* 
+    @keyframes myanimation {
+        0% {background-color: white; left: 0px; top: 0px; border-radius: 0 0 0 0;}
+        25% {background-color: red; left: 300px; top: 0px; border-radius: 50% 0 0 0;}
+        50% {background-color: greenyellow; left: 300px; top:300px;border-radius: 50% 50% 0 0;}
+        75% {background-color: blue; left: 0px; top: 300px;border-radius: 50% 50% 50% 0;}
+        100% {background-color: white; left: 0px; top: 0px;border-radius: 50% 50% 50% 50%;}
+} */
+
+@keyframes myanimation {
+    0% {background-color: white;  border-radius: 0 0 0 0;}
+    25% {background-color: red; border-radius: 50% 0 0 0;}
+    50% {background-color: greenyellow; border-radius: 50% 50% 0 0;}
+    75% {background-color: blue; border-radius: 50% 50% 50% 0;}
+    100% {background-color: white; border-radius: 50% 50% 50% 50%;}
+}
