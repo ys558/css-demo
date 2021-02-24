@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>justify-items-align-items-place-content</title>
+  <style>
+  .container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+
+    /* 
+      justify-content 和 align-content 控制每个item的整体对其方式
+      align-content: 控制y轴垂直方向对齐方式
+      justify-content: 控制x轴水平方向对齐方式
+      两个属性都可以取值 start, end, center, stretch
+  
+      stretch：拉伸铺满，默认值
+      start: 左对齐
+      end：右对齐
+      center：居中
+      space-around: 每个item两边间隔相等，所以最外面两边的间隔是项目中间间隔的一半
+      space-between: item与item的间隔相等，item与container之间没有间隔
+      space-evenly: 项目与项目的间隔相等，项目与容器边框之间也是同样长度的间隔。
+    */
+    justify-content: space-between;
+    /* align-content 需要规定container高度才能起效, 其余属性和justify-content一样 */
+    height: 100vh;
+    align-content: center;
+  
+    /* 也可以将上述两个属性合二为一写：place-content: <align-content> <justify-content>; 
+    如果省略第二个值，浏览器就会假定第二个值等于第一个值。  
+    */
+    /* place-content: center space-around; */
+  }
+  .item {
+    border: 1px solid #e5e4e9;
+  }
+  .item-1 { background-color: #ef342a; }
+  .item-2 { background-color: #f68f26; }
+  .item-3 { background-color: #4ba946; }
+  .item-4 { background-color: #0376c2; }
+  .item-5 { background-color: #c077af; }
+  .item-6 { background-color: #f8d29d; }
+  .item-7 { background-color: #b5a87f; }
+  .item-8 { background-color: #d0e4a9; }
+  .item-9 { background-color: #4dc7ec; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item item-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio officia voluptate culpa esse at laborum nihil quae quos, possimus quod</div>
+    <div class="item item-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio officia voluptate culpa esse at laborum nihil quae quos, possimus quod</div>
+    <div class="item item-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio officia voluptate culpa esse at laborum nihil quae quos, possimus quod</div>
+    <div class="item item-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio officia voluptate culpa esse at laborum nihil quae quos, possimus quod</div>
+    <div class="item item-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio officia voluptate culpa esse at laborum nihil quae quos, possimus quod</div>
+    <div class="item item-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio officia voluptate culpa esse at laborum nihil quae quos, possimus quod</div>
+    <div class="item item-7">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio officia voluptate culpa esse at laborum nihil quae quos, possimus quod</div>
+    <div class="item item-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio officia voluptate culpa esse at laborum nihil quae quos, possimus quod</div>
+    <div class="item item-9">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio officia voluptate culpa esse at laborum nihil quae quos, possimus quod</div>
+  </div>
+</body>
+</html>

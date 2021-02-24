@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid-template-area for layout</title>
+  <style>
+  .container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    /* grid-template-areas: 可用于指定区域布局 */
+    /* grid-template-areas: 'a b c'
+                          'd e f'
+                          'g h i'; */
+    /* 常用的为以下例子：表示同一行属于同一区域： */
+    /* grid-template-areas: 'header header header'
+                          'main main main'
+                          'footer footer footer'; */
+    /* 某些区域不需要使用，可用.表示 */
+    grid-template-areas: 'a . c'
+                        'd . f'
+                        'g . i';
+    /* 注意，区域的命名会影响到网格线。每个区域的起始网格线，会自动命名为区域名-start，终止网格线自动命名为区域名-end。
+
+    比如，区域名为header，则起始位置的水平网格线和垂直网格线叫做header-start，终止位置的水平网格线和垂直网格线叫做header-end */
+  }
+  .container > div {
+    background: #eee;
+    padding: 1em;
+    overflow: hidden;
+  }
+  .container > div:nth-child(odd){
+    background: #ddd;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="items">1</div>
+    <div class="items">2</div>
+    <div class="items">3</div>
+    <div class="items">4</div>
+    <div class="items">5</div>
+    <div class="items">6</div>
+    <div class="items">7</div>
+    <div class="items">8</div>
+    <div class="items">9</div>
+  </div>
+</body>
+</html>

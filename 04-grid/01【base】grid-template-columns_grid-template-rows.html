@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid-template-rows/grid-template-columns</title>
+  <style>
+    .container {
+      display: grid;
+      /* 1. 定义每行高度占比: */
+      /* grid-template-rows: 60% 40%; */
+      /* 2. 定义每列宽： */
+      /* grid-template-columns: 500px 500px; */
+      /* 3. repeat: */
+      /* grid-template-columns: repeat(2, 500px); */
+      /* 4. auto-fill: 表示每列宽度100px，然后自动填充，直到容器不能放置更多的列 */
+      /* grid-template-columns: repeat(auto-fill, 500px); */
+      /* 5. fr 单位: fraction 缩写，即按照比例分割，且可以与其他单位混用 */
+      /* grid-template-columns: 2fr 1fr; */
+      /* 6. [name] : 网格线名称, 不同网格线可以重复，方便引用；同一条网格线也可有两个名称，如： */
+      grid-template-columns: [c1] 2fr [c2 min-col-line] 1fr [c1] 1fr;
+      /* 7. minmax: 规定一个container的最大和最小值，如下，表示行高不小于100px，不大于1fr */
+      grid-template-rows: 1fr 1fr 1fr minmax(10px 1fr);
+      /* 8. auto: 浏览器自己决定宽或高 */
+    }
+    min-col-line {
+      color: red;
+    }
+    .container > div {
+      background: #eee;
+      padding: 1em;
+      overflow: hidden;
+    }
+    .container > div:nth-child(odd){
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="items">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla laudantium reprehenderit rerum odit tempora nihil vitae iure deleniti cupiditate placeat molestias maxime eos, facilis perspiciatis? Placeat, aliquid non provident sapiente maiores excepturi eaque asperiores nemo animi similique iure molestias! Earum modi tenetur nesciunt
+    </div>
+    <div class="items">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quam sed sunt numquam dolores distinctio id quod? Earum, perferendis. Blanditiis totam est cumque delectus repellat sit temporibus hic commodi optio!
+    </div>
+    <div class="items">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla laudantium reprehenderit rerum odit tempora nihil vitae iure deleniti cupiditate placeat molestias maxime eos, facilis perspiciatis? Placeat, aliquid non provident sapiente maiores excepturi eaque asperiores nemo animi similique iure molestias! Earum modi tenetur nesciunt
+    </div>
+    <div class="items">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quam sed sunt numquam dolores distinctio id quod? Earum, perferendis. Blanditiis totam est cumque delectus repellat sit temporibus hic commodi optio!
+    </div>
+    <div class="items">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla laudantium reprehenderit rerum odit tempora nihil vitae iure deleniti cupiditate placeat molestias maxime eos, facilis perspiciatis? Placeat, aliquid non provident sapiente maiores excepturi eaque asperiores nemo animi similique iure molestias! Earum modi tenetur nesciunt
+    </div>
+    <div class="items">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quam sed sunt numquam dolores distinctio id quod? Earum, perferendis. Blanditiis totam est cumque delectus repellat sit temporibus hic commodi optio!
+    </div>
+  </div>
+</body>
+</html>

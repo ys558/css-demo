@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid-template-columns for layout</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 70% 30%;
+      /* grid-gap: <grid-row-gap> <grid-column-gap>; */
+      grid-gap: 20px 5px;
+    }
+    .container > div {
+      background: #eee;
+      padding: 1em;
+      overflow: hidden;
+    }
+    .container > div:nth-child(odd){
+      background: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="items">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, consequatur necessitatibus consequuntur quaerat amet aspernatur ullam obcaecati, repudiandae quasi incidunt facilis illo, modi est delectus cumque quis inventore doloribus voluptate voluptatem unde similique odit. Odio aperiam tempore eum eius perferendis id veritatis ipsa officia quisquam aliquid. Magnam dolore excepturi, maiores eaque facere fuga, quis dolor asperiores nam dolores ullam cumque itaque veniam beatae inventore labore libero voluptatem minus doloremque eligendi ut sint? Fugit omnis molestias beatae doloremque dignissimos? Fuga, quisquam!
+    </div>
+    <div class="items">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quam sed sunt numquam dolores distinctio id quod? Earum, perferendis. Blanditiis totam est cumque delectus repellat sit temporibus hic commodi optio!
+    </div>
+    <div class="items">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, consequatur necessitatibus consequuntur quaerat amet aspernatur ullam obcaecati, repudiandae quasi incidunt facilis illo, modi est delectus cumque quis inventore doloribus voluptate voluptatem unde similique odit. Odio aperiam tempore eum eius perferendis id veritatis ipsa officia quisquam aliquid. Magnam dolore excepturi, maiores eaque facere fuga, quis dolor asperiores nam dolores ullam cumque itaque veniam beatae inventore labore libero voluptatem minus doloremque eligendi ut sint? Fugit omnis molestias beatae doloremque dignissimos? Fuga, quisquam!
+    </div>
+    <div class="items">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam quam sed sunt numquam dolores distinctio id quod? Earum, perferendis. Blanditiis totam est cumque delectus repellat sit temporibus hic commodi optio!
+    </div>
+  </div>
+</body>
+</html>
