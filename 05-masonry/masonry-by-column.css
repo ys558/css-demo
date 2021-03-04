@@ -1,0 +1,40 @@
+body {
+  margin: 4px;
+  font-family: Helvetica;
+}
+
+.masonry {
+  /* 将版面分为4个竖行： */
+  column-count: 4;
+  column-gap: 0;
+}
+
+.item {
+  padding: 2px;
+
+  /* 使图片自动编号： */
+  position: relative;
+  counter-increment: item-counter;
+}
+
+.item img {
+  display: block;
+  width: 100%;
+  /* 高度设置自动，不同长度的图片就会自动显示 */
+  height: auto;
+}
+
+/* 将每个图片进行编号：*/
+.item::after {
+  position: absolute;
+  display: block;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  background-color: #000;
+  color: #fff;
+  content: counter(item-counter);
+}
