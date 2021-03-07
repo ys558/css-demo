@@ -15,9 +15,16 @@
     <img src="./img/03.png" style="height: 160px;">
     <img src="./img/04.png" style="height: 160px;">
   </div>
-  
   <div class="btn">
-    <span></span>
+    <!--
+      不需要js，单纯用css搞定按钮的选择：带label的input:checkbox框：
+      @@ 注：带了label的input框，点击时择整个span（toggle按钮），checkbox也会被选中
+      @@ 如果不带label标签，只能点击checkbox的选择框才能算选中
+    -->
+    <label for="toggle">
+      <input type="checkbox" id="toggle">
+      <span></span>
+    </label>
   </div>
 </body>
 </html>

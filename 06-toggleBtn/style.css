@@ -23,7 +23,7 @@ span {
   width: var(--button-width);
   height: var(--button-height);
   background-color: var(--color-grey);
-  /** 把长方形的span削圆 */
+  /* @ 把长方形的span削圆 */
   border-radius: calc(var(--button-height)/2);
   position:relative;
 }
@@ -38,8 +38,30 @@ span::after {
   border-radius: calc(var(--toggle-diameter)/2);
   position: absolute;
   top: var(--button-toggle-offset);
-  /* 左右移动的动画： */
+
+  /* @ 左右移动的动画： */
   transform: translateX(var(--button-toggle-offset));
-  /* 设置按钮里⚪的阴影： */
+
+  /* @ 设置按钮里⚪的阴影： */
   box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset)*4 ) rgba(0,0,0,.10);
+
+  /* @ 加入移动⚪时动画过渡： */
+  transition: .3s all ease-in-out;
+}
+
+/* @ 隐藏checkbox的选择框 */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* @ 点击整个span（toggle 按钮）时，颜色发生变化： */
+input[type="checkbox"]:checked + span {
+  background-color: var(--color-green);
+}
+/* @ 点击后按钮里的⚪移位的动画： */
+input[type="checkbox"]:checked + span::after {
+  transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+
+    /* 设置按钮里⚪的阴影, 移动到右边时，阴影显示在左边： */
+    box-shadow: var(--toggle-shadow-offset * -1) 0 calc(var(--toggle-shadow-offset)*4 ) rgba(0,0,0,.10);
 }
