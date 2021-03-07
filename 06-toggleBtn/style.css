@@ -74,3 +74,9 @@ input[type="checkbox"]:checked:active + span::after {
 input[type="checkbox"] {
   display: none;
 }
+
+/* @ 深色模式处理： */
+@media ( prefers-color-scheme: dark) {
+  body { background-color: #1c1c1e;}
+  span { background-color: var(--color-dark-grey); }
+}
