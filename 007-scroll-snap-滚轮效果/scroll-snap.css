@@ -1,0 +1,68 @@
+.roller {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  /* 自动卷轴 */
+  scroll-snap-type: y mandatory;
+}
+.roller li {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #111;
+
+  /* 自动向上移动贴服 */
+  scroll-snap-align: start;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.roller-wrapper {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  /* 渐变底色 */
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.3) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 75%, rgba(0,0,0,.3) 100%);
+  border-radius: 12px;
+}
+
+.roller-wrapper::after {
+  /* 想要伪类显示出来, 必须设置以下两项: */
+  content: '';
+  position: absolute;
+
+  /* 中间的选择框 */
+  top: 120px;
+  width: 100%;
+  height: 60px;
+  /* 选择框细节:  */
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.1) 0%, rgba(0,0,0,.2) 50%, rgba(0,0,0,.25)50%, rgba(0,0,0,.1)100%);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, .12);
+  border-top: 1px solid rgba(0, 0, 0, .12);
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+
+  /* 由于选择框是覆盖在列表上的, 所以覆盖的部分不能用鼠标点击到scroll bar,
+  设置该属性可以在遮盖到的部分也能拖拽scroll bar  */
+  pointer-events: none;
+}
+
+/* 能选择到最后一个 */
+.roller li:last-child {
+  margin-bottom: 120px;
+}
