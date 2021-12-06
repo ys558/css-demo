@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>flex 上下左右居中元素</title>
+  <style>
+    .flex {
+      /* 必须设置高度,否则div.flex无高度,不能垂直对齐 */
+      /* 1vh 等于1/100的视口高度，1vw 等于1/100的视口宽度 */
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex">
+    <div>😄</div>
+  </div>
+</body>
+</html>
