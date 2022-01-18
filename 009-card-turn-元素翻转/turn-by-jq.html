@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>翻转效果js实现</title>
+  <style>
+    .box, .back, .front { width: 100px; height: 100px; }
+    /* 
+      js实现方法:
+      1. 外层div.box相对定位,包着里面两个div.front和div.back绝对定位
+      2. 利用 在外层div.box添加
+    */
+
+    .box { position: relative; transition: 0.5s; transform-style: preserve-3d;}
+    .back, .front { position: absolute; backface-visibility: hidden; }
+    .back { background: goldenrod; transform: rotateY(180deg); }
+    .front { background: khaki; }
+  </style>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<body>
+  <div class="box">
+    <div class="back">后</div>
+    <div class="front">前</div>
+  </div>
+  <script>
+    // 1. jq写法:
+    $(()=> {
+      $(".front").click(()=> {
+        if($(".box").attr("style") === undefined ) {
+          $(".box").css("transform", "rotateY(180deg)")
+        }
+      })
+      $(".back").click(()=> {
+        if($(".box").attr("style")){
+          $(".box").removeAttr("style")
+        }
+      })
+    })
+  </script>
+</body>
+</html>

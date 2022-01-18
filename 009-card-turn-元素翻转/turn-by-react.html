@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>React</title>
+  <!-- 引入react -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <!-- 引入react-dom -->
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <style>
+    .box, .back, .front { width: 100px; height: 100px; }
+    .box { position: relative; transition: 0.5s; transform-style: preserve-3d;}
+    .back, .front { 
+      position: absolute; 
+      backface-visibility: hidden; 
+    }
+    .back {
+      background: goldenrod; 
+      transform: rotateY(180deg);
+    }
+    .front {
+      background: tomato; 
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app"></div>
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor(props){
+        super(props)
+        this.state = {
+          transform: ''
+        }
+      }
+
+      render() {
+        const { transform } = this.state
+        return(
+          <div style={{ transform }}>
+            <div className="front" onClick={() => this.setState({ transform: 'rotateY(180deg)' })}>前</div>
+            <div className="back" onClick={() => this.setState({ transform: '' })}>后</div>
+          </div>
+        )
+      }
+    }
+    ReactDOM.render(<App />, document.querySelector(".app"))
+  </script>
+</body>
+
+</html>
