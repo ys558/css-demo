@@ -1,0 +1,41 @@
+<div class="wrapper">
+  <div class="two item">Side Left</div>
+  <div class="four item">Side Right</div>
+  <div class="five item">footer</div>
+</div>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-areas: 
+    "left-side right-side"
+    "footer footer";
+    min-height: 100vh;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 100px;
+  }
+
+  .two { 
+    background: #8CC7B5;
+    grid-area: left-side;
+  }
+  .four {
+    background: #BEE7E9;
+    grid-area: right-side;
+  }
+  .five {
+    background: #E6CEAC;
+    grid-area: footer;
+  }
+  .item {
+    text-align: center;
+    font-size: 200%;
+    color: #fff;
+  }
+</style>

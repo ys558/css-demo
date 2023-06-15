@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <div class="one item">One</div>
+  <div class="two item">Two</div>
+  <div class="three item">Three</div>
+  <div class="four item">Four</div>
+  <div class="five item">Five</div>
+  <div class="six item">Six</div>
+</div>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  /* 声明一个容器 */
+  display: grid;
+  /*  列数及列宽占比
+    这有6个box，一行3个，所以自动折成2行显示：
+    repeat关键字，以下代码等价于：
+    grid-template-columns: 1fr 1fr 1fr;
+    fr 独有单位，表示占用几份
+  */
+  grid-template-columns: repeat(3, 1fr);
+  /*  行间距和列间距  */
+  grid-gap: 5px;
+  /*  声明行的高度
+    这有2行box，所以100px是上面一排盒子的高度，200px是下面一排盒子的高度
+  */
+  grid-template-rows: 100px 200px;
+}
+.one {
+  background: #19CAAD;
+}
+.two { 
+  background: #8CC7B5;
+}
+.three {
+  background: #D1BA74;
+}
+.four {
+  background: #BEE7E9;
+}
+
+.six {
+  background: #ECAD9E;
+}
+.item {
+  text-align: center;
+  font-size: 200%;
+  color: #fff;
+}
+</style>

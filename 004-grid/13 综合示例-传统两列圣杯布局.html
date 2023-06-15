@@ -1,0 +1,54 @@
+<div class="wrapper">
+  <div class="one item">header</div>
+  <div class="two item">Side Left</div>
+  <div class="three item">Three</div>
+  <div class="four item">Side Right</div>
+  <div class="five item">footer</div>
+</div>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "left content right"
+    "footer footer footer";
+  min-height: 100vh;
+
+  /* 定义列宽 */
+  grid-template-columns: 200px 1fr 200px;
+  /* 定义行高 */
+  grid-template-rows: 100px 1fr 50px;
+}
+.one {
+  background: #19CAAD;
+  grid-area: header;
+}
+.two { 
+  background: #8CC7B5;
+  grid-area: left;
+}
+.three {
+  background: #D1BA74;
+  grid-area: content;
+}
+.four {
+  background: #BEE7E9;
+  grid-area: right;
+}
+.five {
+  background: #E6CEAC;
+  grid-area: footer;
+
+}
+.item {
+  text-align: center;
+  font-size: 200%;
+  color: #fff;
+}
+</style>
