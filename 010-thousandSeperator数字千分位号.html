@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="number" ></div>
+  <script>
+    const formatNumber = (num) => {
+      const [integerPart, decimalPart = ''] = (num).toString().split('.');
+      return integerPart.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + (decimalPart ? `.${decimalPart}` : '');
+    };
+    var number = '-1234567.8945';
+    var formattedNumber = formatNumber(number);
+    var element = document.querySelector('.number');
+    element.innerHTML = formattedNumber ;
+  </script>
+</body>
+</html>

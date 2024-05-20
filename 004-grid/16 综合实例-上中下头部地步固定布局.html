@@ -1,0 +1,41 @@
+<div class="wrapper">
+  <div class="header item">header</div>
+    <div class="two item">Content</div>
+    <div class="five item">footer</div>
+</div>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer";
+    min-height: 100vh;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 100px;
+  }
+  .header {
+    background: lightgray;
+    grid-area: header;
+  }
+
+  .two { 
+    background: #8CC7B5;
+    grid-area: content;
+  }
+  .five {
+    background: #E6CEAC;
+    grid-area: footer;
+  }
+  .item {
+    text-align: center;
+    font-size: 200%;
+    color: #fff;
+  }
+</style>

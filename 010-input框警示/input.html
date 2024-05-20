@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 输入框样式 */
+input.warning {
+  border: 2px solid red;
+  animation: neon 1s ease-in-out infinite alternate;
+}
+
+/* 霓虹灯效果动画 */
+@keyframes neon {
+  0% {
+    box-shadow: 0 0 5px red;
+  }
+  100% {
+    box-shadow: 0 0 20px red;
+  }
+}
+
+/* 不用动画的效果： */
+/* input.warning {
+  border: 2px solid red;
+  box-shadow: 0 0 5px 5px rgba(255, 0, 0, 0.5);
+} */
+
+  </style>
+</head>
+<body>
+  <input type="text" class="warning" placeholder="请输入内容" />
+
+</body>
+</html>
