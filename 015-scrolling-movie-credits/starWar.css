@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  background: rgb(20, 20, 20);
+  overflow: hidden;
+  font-family: "Roboto";
+}
+
+.wrapper {
+  display: flex;
+  height: 100%; /* 视口高度 */
+  width: 60%;
+  margin: 0 auto;
+}
+
+.scroll-text {
+  color: #ffc909;
+  font-size: 3vw;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-align: justify;
+  position: relative;
+
+  /* 滚动： */
+  animation: scroll 10s linear infinite;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+@keyframes scroll {
+  from {
+    top: 0;
+  }
+  to {
+    top: -7500px;
+  }
+}

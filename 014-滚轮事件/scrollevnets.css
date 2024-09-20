@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap");
+
+body {
+  background-color: #131316;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: "Poetsen One", sans-serif;
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  opacity: 0;
+  /* blur(100px)给图像添加高斯模糊效果 */
+  filter: blur(100px);
+  transform: translateX(-100%);
+  transition: all 2s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}

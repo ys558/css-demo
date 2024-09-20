@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Demo</title>
+    <style>
+      /* Reset some default browser styles */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0; /* Light gray background for visibility */
+      }
+
+      .gradient-div {
+        width: 300px; /* Adjust the width as needed */
+        height: 300px; /* Adjust the height as needed */
+        background: linear-gradient(
+          to bottom,
+          #7e7b7b 0%,
+          transparent 33%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        /* Explanation:  
+          - The gradient starts with red (rgba(255, 0, 0, 1)) at 0%.  
+          - It transitions to transparent red (rgba(255, 0, 0, 0)) at 33%.  
+          - From 33% to 100%, it remains fully transparent (rgba(255, 255, 255, 0) is white but fully transparent).  
+          */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gradient-div">
+      <button>123</button>
+      <button>123</button>
+    </div>
+  </body>
+</html>
